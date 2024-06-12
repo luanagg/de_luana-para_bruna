@@ -1,0 +1,95 @@
+/* Reset básico para garantir consistência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe6e6;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 90%;
+}
+
+h1, h2, p {
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #ff4081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e60073;
+}
+
+.heart {
+  font-size: 80px;
+  color: #ff4081;
+  margin-top: 20px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+.monster-img {
+  margin-top: 20px;
+  width: 150px;
+  height: auto;
+  animation: jump 1s infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+/* Media query para telas pequenas, como a do iPhone 11 */
+@media (max-width: 828px) {
+  h1, h2 {
+      font-size: 1.5em;
+  }
+  
+  button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+
+  .heart {
+      font-size: 60px;
+  }
+
+  .monster-img {
+      width: 120px;
+  }
+}
